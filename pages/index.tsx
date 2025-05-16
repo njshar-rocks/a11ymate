@@ -1,24 +1,22 @@
 import Layout from '../components/Layout';
-import Link from 'next/link';
-
+import Hero from '../components/Hero';
 
 export default function HomePage() {
   return (
     <Layout
-    title="A11yMate – Make the Web Accessible"
-    description="A lightweight plugin that helps developers ensure accessibility standards effortlessly.">
-      {/* Hero Section */}
-      <section className="px-6 py-20 text-center bg-gray-50">
-        <h1 className="text-4xlWha md:text-6xl font-bold mb-4">Make the Web Accessible for Everyone</h1>
+      title="A11yMate – Accessibility Plugin"
+      description="Build accessible websites faster and with confidence."
+    >
+      <Hero
+        title="Make the Web Accessible for Everyone"
+        subtitle="A lightweight, powerful plugin to help developers ensure their sites meet accessibility standards effortlessly."
+        buttons={[
+          { label: 'Get Started', href: '/docs', variant: 'primary' },
+          { label: 'Learn More', href: '/features', variant: 'secondary' },
+        ]}
+      />
 
-        <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
-          A lightweight, powerful plugin to help developers ensure their sites meet accessibility standards effortlessly.
-        </p>
-        <div className="flex justify-center gap-4">
-          <Link href="/docs" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">Get Started</Link>
-          <Link href="/features" className="px-6 py-3 border border-gray-300 rounded-lg font-medium hover:bg-gray-100 transition">Learn More</Link>
-        </div>
-      </section>
+      {/* other homepage content */}
 
       {/* Features Summary */}
       <section className="px-6 py-16">

@@ -10,7 +10,7 @@ export default function ContactPage() {
         <h1 className="text-3xl font-bold mb-6 text-center">Contact Us</h1>
 
         {submitted ? (
-          <p className="text-green-600 text-center">Thanks! We'll get back to you soon.</p>
+        <p className="text-green-600 text-center">Thanks! We&rsquo;ll get back to you soon.</p>
         ) : (
           <form
             className="space-y-4"

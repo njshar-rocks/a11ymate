@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Layout from '../components/Layout';
 
 export default function HomePage() {
@@ -14,8 +13,8 @@ export default function HomePage() {
           A lightweight, powerful plugin to help developers ensure their sites meet accessibility standards effortlessly.
         </p>
         <div className="flex justify-center gap-4">
-          <a href="/docs" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">Get Started</a>
-          <a href="/features" className="px-6 py-3 border border-gray-300 rounded-lg font-medium hover:bg-gray-100 transition">Learn More</a>
+          <Link href="/docs" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">Get Started</Link>
+          <Link href="/features" className="px-6 py-3 border border-gray-300 rounded-lg font-medium hover:bg-gray-100 transition">Learn More</Link>
         </div>
       </section>
 

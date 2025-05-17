@@ -15,7 +15,7 @@ export default function Layout({
   description = 'A11yMate helps developers build accessible websites quickly and effectively.',
 }: LayoutProps) {
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <main className="min-h-screen bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />

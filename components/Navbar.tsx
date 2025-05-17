@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
 import { Sun, Moon } from 'lucide-react';
+import Image from 'next/image';
+
 
 const navItems = [
   { href: '/', label: 'Home' },
@@ -48,11 +50,13 @@ export default function Navbar() {
       <div className="flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <img
-            src={isDarkMode ? "/images/logo-white.svg" : "/images/logo.png"}
-            alt="A11yMate Logo"
+        <Image
+            src="/images/logo.png"
+            alt="Logo"
+            width={120}
+            height={32}
             className="h-8 w-auto"
-          />
+            />
           <span className="sr-only">A11yMate Home</span>
         </Link>
 

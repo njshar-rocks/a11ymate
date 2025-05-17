@@ -51,11 +51,12 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
         <Image
-            src="/images/logo.png"
-            alt="Logo"
+            src={isDarkMode ? "/images/logo-white.svg" : "/images/logo.png"}
+            alt="A11yMate Logo"
             width={120}
             height={32}
             className="h-8 w-auto"
+            priority
             />
           <span className="sr-only">A11yMate Home</span>
         </Link>

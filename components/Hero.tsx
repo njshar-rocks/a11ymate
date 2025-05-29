@@ -31,7 +31,7 @@ export default function Hero({
   className="
     absolute -top-32 -left-32 w-96 h-96
     bg-gradient-to-tr
-      from-blue-200 via-blue-100 to-blue-200
+      from-blue-200 via-blue-100 to-blue-400
     dark:from-pink-400 dark:via-pink-500 dark:to-pink-400
     opacity-30 rounded-full filter blur-3xl animate-blob
   "
@@ -40,7 +40,7 @@ export default function Hero({
   className="
     absolute -bottom-32 -right-32 w-96 h-96
     bg-gradient-to-br
-      from-blue-200 via-blue-100 to-blue-200
+      from-blue-200 via-blue-100 to-blue-400
     dark:from-pink-400 dark:via-pink-500 dark:to-pink-400
     opacity-30 rounded-full filter blur-3xl animate-blob animation-delay-2000
   "

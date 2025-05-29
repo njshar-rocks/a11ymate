@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
 
 interface Button {
   label: string;
@@ -24,26 +23,14 @@ export default function Hero({
   imageSrc = '/images/hero-screenshot.png',
   imageAlt = 'Accessibility menu example',
 }: HeroProps) {
-  const [isDark, setIsDark] = useState(false);
-
-  useEffect(() => {
-    const html = document.documentElement;
-    const obs = new MutationObserver(() =>
-      setIsDark(html.classList.contains('dark'))
-    );
-    obs.observe(html, { attributes: true, attributeFilter: ['class'] });
-    setIsDark(html.classList.contains('dark'));
-    return () => obs.disconnect();
-  }, []);
-
   return (
     <section className="relative overflow-hidden bg-white dark:bg-gray-900">
       {/* Gradient blobs */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-500 opacity-30 rounded-full filter blur-3xl animate-blob"></div>
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 opacity-30 rounded-full filter blur-3xl animate-blob animation-delay-2000"></div>
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-500 opacity-30 rounded-full filter blur-3xl animate-blob" />
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 opacity-30 rounded-full filter blur-3xl animate-blob animation-delay-2000" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-32 flex flex-col-reverse lg:flex-row items-center gap-12">
-        {/* Text */}
+        {/* Text Column */}
         <div className="flex-1 text-center lg:text-left">
           <motion.p
             initial={{ opacity: 0, y: -10 }}
@@ -95,7 +82,7 @@ export default function Hero({
           </motion.div>
         </div>
 
-        {/* Screenshot */}
+        {/* Screenshot Column */}
         <div className="flex-1 flex justify-center lg:justify-end">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}

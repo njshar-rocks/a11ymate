@@ -26,8 +26,26 @@ export default function Hero({
   return (
     <section className="relative overflow-hidden bg-white dark:bg-gray-900">
       {/* Gradient blobs */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-tr from-blue-400 via-purple-500 to-pink-500 opacity-30 rounded-full filter blur-3xl animate-blob" />
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 opacity-30 rounded-full filter blur-3xl animate-blob animation-delay-2000" />
+      {/* Light-mode: blue blobs.  Dark-mode: pink blobs */}
+<div
+  className="
+    absolute -top-32 -left-32 w-96 h-96
+    bg-gradient-to-tr
+      from-blue-200 via-blue-100 to-blue-200
+    dark:from-pink-400 dark:via-pink-500 dark:to-pink-400
+    opacity-30 rounded-full filter blur-3xl animate-blob
+  "
+/>
+<div
+  className="
+    absolute -bottom-32 -right-32 w-96 h-96
+    bg-gradient-to-br
+      from-blue-200 via-blue-100 to-blue-200
+    dark:from-pink-400 dark:via-pink-500 dark:to-pink-400
+    opacity-30 rounded-full filter blur-3xl animate-blob animation-delay-2000
+  "
+/>
+
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 lg:py-32 flex flex-col-reverse lg:flex-row items-center gap-12">
         {/* Text Column */}

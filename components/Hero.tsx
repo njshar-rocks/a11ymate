@@ -70,8 +70,8 @@ export default function Hero({
                 <a
                   className={`inline-flex items-center justify-center px-6 py-3 rounded-full text-base font-semibold transition-shadow focus:outline-none focus:ring-2 focus:ring-offset-2 ${
                     variant === 'primary'
-                      ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-md focus:ring-blue-500'
-                      : 'border border-transparent text-blue-600 bg-white hover:bg-gray-100 dark:bg-gray-800 dark:text-blue-400 focus:ring-blue-400'
+                      ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-md focus:ring-blue-500 dark:bg-pink-500'
+                      : 'border border-transparent text-blue-600 bg-white hover:bg-gray-100 dark:bg-gray-800 dark:text-pink-400 focus:ring-blue-400'
                   }`}
                 >
                   {label}

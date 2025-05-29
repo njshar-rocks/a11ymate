@@ -1,9 +1,16 @@
+import fs from 'fs';
+import path from 'path';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import FeatureCards from '../components/FeatureCards';
 import WhyA11yMate from '../components/WhyA11ymate';
+import TrustedBy, { Logo } from '../components/TrustedBy';
 
-export default function HomePage() {
+interface HomePageProps {
+  logos: Logo[];
+}
+
+export default function HomePage({ logos }: HomePageProps) {
   return (
     <Layout
       title="A11yMate – Accessibility Plugin"
@@ -20,6 +27,25 @@ export default function HomePage() {
 
       <FeatureCards />
       <WhyA11yMate />
+
+      {/* Trusted by logos carousel */}
+      <TrustedBy logos={logos} />
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const logoDir = path.join(process.cwd(), 'public', 'logos');
+  const files = fs.readdirSync(logoDir).filter((f) =>
+    /\.(svg|png|jpg|jpeg)$/.test(f)
+  );
+
+  const logos: Logo[] = files.map((file) => ({
+    src: `/logos/${file}`,
+    alt: file.replace(/\.(svg|png|jpg|jpeg)$/, '').replace(/[-_]/g, ' '),
+  }));
+
+  return {
+    props: { logos },
+  };
 }

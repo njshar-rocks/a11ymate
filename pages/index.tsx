@@ -3,7 +3,7 @@ import path from 'path';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import FeatureCards from '../components/FeatureCards';
-import WhyA11yMate from '../components/WhyA11ymate';
+import WhyA11yMate from '../components/WhyA11yMate';
 import TrustedBy, { Logo } from '../components/TrustedBy';
 
 interface HomePageProps {
@@ -18,7 +18,7 @@ export default function HomePage({ logos }: HomePageProps) {
     >
       <Hero
         title="Make the Web Accessible for Everyone"
-        subtitle="A lightweight, powerful plugin to help developers ensure their sites meet accessibility standards effortlessly."
+        subtitle="A lightweight, powerful WordPress plugin to help developers ensure their sites meet accessibility standards effortlessly."
         buttons={[
           { label: 'Get Started', href: '/docs', variant: 'primary' },
           { label: 'Learn More', href: '/features', variant: 'secondary' },

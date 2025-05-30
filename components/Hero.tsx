@@ -78,26 +78,27 @@ export default function Hero({
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
-          >
-            {buttons.map(({ label, href, variant = 'primary' }) => (
-              <Link key={href} href={href} passHref>
-                <a
-                  className={`inline-flex items-center justify-center px-6 py-3 rounded-full text-base font-semibold transition-shadow focus:outline-none focus:ring-2 focus:ring-offset-2 ${
-                    variant === 'primary'
-                      ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-md focus:ring-blue-500 dark:bg-pink-500'
-                      : 'border border-transparent text-blue-600 bg-white hover:bg-gray-100 dark:bg-gray-800 dark:text-pink-400 focus:ring-blue-400'
-                  }`}
-                >
-                  {label}
-                  {variant === 'primary' && <span className="ml-2">→</span>}
-                </a>
-              </Link>
-            ))}
-          </motion.div>
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.5, delay: 0.3 }}
+  className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
+>
+  {buttons.map(({ label, href, variant = 'primary' }) => (
+    <Link
+      key={href}
+      href={href}
+      className={`inline-flex items-center justify-center px-6 py-3 rounded-full text-base font-semibold transition-shadow focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+        variant === 'primary'
+          ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-md focus:ring-blue-500 dark:bg-pink-500'
+          : 'border border-transparent text-blue-600 bg-white hover:bg-gray-100 dark:bg-gray-800 dark:text-pink-400 focus:ring-blue-400'
+      }`}
+    >
+      {label}
+      {variant === 'primary' && <span className="ml-2">→</span>}
+    </Link>
+  ))}
+</motion.div>
+
         </div>
 
         {/* Screenshot Column */}

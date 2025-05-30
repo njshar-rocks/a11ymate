@@ -3,7 +3,7 @@ import path from 'path';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import FeatureCards from '../components/FeatureCards';
-import WhyA11yMate from '../components/WhyA11yMate';
+import WhyA11yMate from '../components/WhyA11ymate';
 import TrustedBy, { Logo } from '../components/TrustedBy';
 
 interface HomePageProps {
